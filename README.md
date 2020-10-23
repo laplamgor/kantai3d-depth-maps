@@ -1,4 +1,4 @@
-# Kantai3d Depth Maps
+# Kantai 3D Depth Maps
 This repository stores all the depth map source PSD files used in Kantai3D Mod.
 
 Feel free to download and contribute.
