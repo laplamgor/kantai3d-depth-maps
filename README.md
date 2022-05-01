@@ -1,14 +1,13 @@
 [⬅️ back to top repo](https://github.com/laplamgor/kantai3d)
 
-# Kantai3D Depth Maps
-This repository stores all the depth map files used in Kantai3D Mod.
-
-p.s. Older depth maps are in PSD format. Newer depth maps are in PNG format.
+# Kantai3D Custom Depth Maps
+This repository stores all the manually painted depth map files used in Kantai3D Mod.
 
 Feel free to download and contribute.
 
 Does not contain any original game content of Kancolle.
 
+Does not include the AI generated depth maps which are also used by Kantai3D but have rougher quality and are difficult to edit.
 
 # Depth Map format
 
@@ -51,11 +50,11 @@ p.s. Blue values are only being sampled on a 10px * 10px grid vertices in Kantai
 
 # Downloading via jsdelivr CDN
 
-Kantai3D Mod download depth maps from this repo via jsdelivr CDN.
+Kantai3D Mod downloads custom depth maps from this repo via jsdelivr CDN.
 
 The URL of a depth map will be like:
 
-https://cdn.jsdelivr.net/gh/laplamgor/kantai3d-depth-maps@master/source/0412/0412_7506_xjsgvmgfleuu_v43.png
+https://cdn.jsdelivr.net/gh/laplamgor/kantai3d-depth-maps@master/source/0412/0412_7506_xjsgvmgfleuu_v45.png
 
 
 
@@ -64,6 +63,6 @@ https://cdn.jsdelivr.net/gh/laplamgor/kantai3d-depth-maps@master/source/0412/041
 
 You can find all currently supported ship name list here: 
 
-https://github.com/users/laplamgor/projects/1#column-10244994
+https://github.com/users/laplamgor/projects/3/views/1
 
-Currently Kantai3D does not support any medium damaged CG.
+Currently Kantai3D does not have any custom depth map for medium damaged CG.
