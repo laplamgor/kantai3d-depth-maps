@@ -23,12 +23,12 @@
     {
       "id": "E",
       "pattern": "(,'skin_id':this\\[[^{]{0,90}\\]\\};)",
-      "replacement": ",localStorage.setItem('kantai3d.is120Enabled', this._sound._toggle120.value),\r\nlocalStorage.setItem('kantai3d.isDepthEnabled', this._sound._toggle3d.value),\r\nlocalStorage.setItem('kantai3d.isDepthAiEnabled', this._sound._toggle3d_ai.value),\r\nconsole.log(localStorage.getItem('kantai3d.is120Enabled')),\r\ncreatejs.Ticker.setFPS((localStorage.getItem('kantai3d.is120Enabled') != 'false') ? 120 : 60)\r\n$1"    },
+      "replacement": "$1\r\nlocalStorage.setItem('kantai3d.is120Enabled', this._sound._toggle120.value);\r\nlocalStorage.setItem('kantai3d.isDepthEnabled', this._sound._toggle3d.value);\r\nlocalStorage.setItem('kantai3d.isDepthAiEnabled', this._sound._toggle3d_ai.value);\r\nconsole.log(localStorage.getItem('kantai3d.is120Enabled'));\r\ncreatejs.Ticker.setFPS((localStorage.getItem('kantai3d.is120Enabled') != 'false') ? 120 : 60)\r\n;"
+    },
     {
       "id": "F",
       "pattern": "((null==this[^,;=]{0,40}&&\\(this[^,;=]{0,40}=[^,;=]{0,70}\\),this[^,;=]{0,40}=[^,;=]{0,70},){2})",
       "replacement": "$1\r\nthis._toggle120.value = localStorage.getItem('kantai3d.is120Enabled') != 'false',\r\nthis._toggle3d.value = localStorage.getItem('kantai3d.isDepthEnabled') != 'false',\r\nthis._toggle3d_ai.value = localStorage.getItem('kantai3d.isDepthAiEnabled') != 'false',\r\nconsole.log(createjs.Ticker.timingMode),\r\nconsole.log(createjs.Ticker.framerate),"
-
     },
     {
       "id": "G",
