@@ -63,6 +63,16 @@
   ],
   "goto_patches": [
     {
+      "id": "G",
+      "pattern": "\\}(return.{0,599}\\(0(x0)?,parseInt\\([^,;\u003d]{0,20}\\)\\)\\))",
+      "replacement": "\n } return window.displacementPath \u003d (function () {\n$1\n})();\n"
+    },
+    {
+      "id": "E",
+      "pattern": "(,\u0027skin_id\u0027:this\\[[^{]{0,90}\\]\\};)",
+      "replacement": "$1\nwindow.isDepthEnabled \u003d this._sound._toggle3d.value; \n    window.isDepthAiEnabled \u003d this._sound._toggle3d_ai.value;\n    "
+    },
+    {
       "id": "A",
       "pattern": "(\u003d[^,;\u003d]{0,50}\\(this\\)\\|\\|this;return ([^,;\u003d]{0,50}\u003dnew PIXI.{0,80},){6}[^,;\u003d]{0,50}\u003dnew [^;\u003d]{0,80}\\((0x4f|79),(0xa4|164)\\),)",
       "replacement": "\u003d window.sound_options $1"
@@ -83,24 +93,9 @@
       "replacement": "$1\n ;    this._toggle3d.dispose();\n    this._toggle3d \u003d null;\n    this._toggle3d_ai.dispose();\n    this._toggle3d_ai \u003d null; $3"
     },
     {
-      "id": "E",
-      "pattern": "(,\u0027skin_id\u0027:this\\[[^{]{0,90}\\]\\};)",
-      "replacement": "$1\nwindow.isDepthEnabled \u003d this._sound._toggle3d.value; \n    window.isDepthAiEnabled \u003d this._sound._toggle3d_ai.value;\n    "
-    },
-    {
       "id": "F",
       "pattern": "((null\u003d\u003dthis[^,;\u003d]{0,40}\u0026\u0026\\(this[^,;\u003d]{0,40}\u003d[^,;\u003d]{0,70}\\),this[^,;\u003d]{0,40}\u003d[^,;\u003d]{0,70},){2})",
       "replacement": "$1\n    this._toggle3d.value \u003d window.isDepthEnabled !\u003d false,\n    this._toggle3d_ai.value \u003d window.isDepthAiEnabled !\u003d false,"
-    },
-    {
-      "id": "G",
-      "pattern": "\\}(return.{0,599}\\(0(x0)?,parseInt\\([^,;\u003d]{0,20}\\)\\)\\))",
-      "replacement": "\n } return window.displacementPath \u003d (function () {\n$1\n})();\n"
-    },
-    {
-      "id": "H",
-      "pattern": "(new PIXI[^,;\u003d]{0,20}\\([^,;\u003d]{0,70},[^,;\u003d]{0,60},[^,;\u003d]{0,20}\\);document)",
-      "replacement": "\n window.pixiApp \u003d $1"
     },
     {
       "id": "I",
@@ -116,6 +111,11 @@
       "id": "K",
       "pattern": "(\\\u003dMath[^,;\u003d]{0,40},[^,;\u003d]{0,30}\\\u003d(0x)?1\\+(0)?\\.012[^,;\u003d]{0,10}\\*\\(.{0,29}\\);this[^,;\u003d]{0,90}\\([^,;\u003d]{0,90}\\),this(\\.y|\\[\u0027y\u0027\\])\u003dthis[^,;\u003d]{0,20}-1.5\\*[^,;\u003d]{0,40}\\*1.8;?)",
       "replacement": "\n \u003d window.charasin $1 ;\nwindow.displacementFilter.uniforms.textureScale \u003d this.scale.x;\n\n"
+    },
+    {
+      "id": "H",
+      "pattern": "(new PIXI[^,;\u003d]{0,20}\\([^,;\u003d]{0,70},[^,;\u003d]{0,60},[^,;\u003d]{0,20}\\);document)",
+      "replacement": "\n window.pixiApp \u003d $1"
     },
     {
       "id": "L",
