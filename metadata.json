@@ -53,7 +53,7 @@
     {
       "id": "K",
       "pattern": "(\\=Math[^,;=]{0,40},[^,;=]{0,30}\\=(0x)?1\\+(0)?\\.012[^,;=]{0,10}\\*\\(.{0,29}\\);this[^,;=]{0,90}\\([^,;=]{0,90}\\),this(\\.y|\\['y'\\])=this[^,;=]{0,20}-1.5\\*[^,;=]{0,40}\\*1.8;?)",
-      "replacement": " = window.charasin $1 ;\r\nwindow.displacementFilter && window.displacementFilter.uniforms.textureScale = this.scale.x;"
+      "replacement": " = window.charasin $1 ;\r\nif (window.displacementFilter) window.displacementFilter.uniforms.textureScale = this.scale.x;"
     },
     {
       "id": "L",
@@ -110,7 +110,7 @@
     {
       "id": "K",
       "pattern": "(\\\u003dMath[^,;\u003d]{0,40},[^,;\u003d]{0,30}\\\u003d(0x)?1\\+(0)?\\.012[^,;\u003d]{0,10}\\*\\(.{0,29}\\);this[^,;\u003d]{0,90}\\([^,;\u003d]{0,90}\\),this(\\.y|\\[\u0027y\u0027\\])\u003dthis[^,;\u003d]{0,20}-1.5\\*[^,;\u003d]{0,40}\\*1.8;?)",
-      "replacement": "\n \u003d window.charasin $1 ;\nwindow.displacementFilter && window.displacementFilter.uniforms.textureScale \u003d this.scale.x;\n\n"
+      "replacement": "\n \u003d window.charasin $1 ;\nif (window.displacementFilter) window.displacementFilter.uniforms.textureScale \u003d this.scale.x;\n\n"
     },
     {
       "id": "H",
