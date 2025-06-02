@@ -37,8 +37,8 @@
     },
     {
       "id": "H",
-      "pattern": "(new PIXI[^,;=]{0,20}\\([^,;=]{0,70},[^,;=]{0,60},[^,;=]{0,20}\\);document)",
-      "replacement": "\r\n window.pixiApp = $1"
+      "pattern": "(antialias.{0,90})(new PIXI[^,;=]{0,20}\\([^,;=]{0,70},[^,;=]{0,60},[^,;=]{0,20}\\);)",
+      "replacement": "$1 \r\n window.pixiApp = $2"
     },
     {
       "id": "I",
@@ -114,8 +114,8 @@
     },
     {
       "id": "H",
-      "pattern": "(new PIXI[^,;\u003d]{0,20}\\([^,;\u003d]{0,70},[^,;\u003d]{0,60},[^,;\u003d]{0,20}\\);document)",
-      "replacement": "\n window.pixiApp \u003d $1"
+      "pattern": "(antialias.{0,90})(new PIXI[^,;\u003d]{0,20}\\([^,;\u003d]{0,70},[^,;\u003d]{0,60},[^,;\u003d]{0,20}\\);)",
+      "replacement": "$1 \n window.pixiApp \u003d $2"
     },
     {
       "id": "L",
