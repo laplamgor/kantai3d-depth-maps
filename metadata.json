@@ -31,9 +31,9 @@
       "replacement": "$1\r\nthis._toggle120.value = localStorage.getItem('kantai3d.is120Enabled') != 'false',\r\nthis._toggle3d.value = localStorage.getItem('kantai3d.isDepthEnabled') != 'false',\r\nthis._toggle3d_ai.value = localStorage.getItem('kantai3d.isDepthAiEnabled') != 'false',\r\nconsole.log(createjs.Ticker.timingMode),\r\nconsole.log(createjs.Ticker.framerate),"
     },
     {
-      "id": "G",
-      "pattern": "\\}(return.{0,599}\\(0(x0)?,parseInt\\([^,;=]{0,20}\\)\\)\\))",
-      "replacement": "\r\n } return window.displacementPath = (function () {\r\n$1\r\n})();\r\n"
+      "id": "G2",
+      "pattern": "(return _.{0,599}\\(0(x0)?,parseInt\\([^,;=]{0,20}\\)\\)\\))",
+      "replacement": "\r\n return window.displacementPath = (function () {\r\n$1\r\n})();\r\n"
     },
     {
       "id": "H",
@@ -63,9 +63,9 @@
   ],
   "goto_patches": [
     {
-      "id": "G",
-      "pattern": "\\}(return.{0,599}\\(0(x0)?,parseInt\\([^,;\u003d]{0,20}\\)\\)\\))",
-      "replacement": "\n } return window.displacementPath \u003d (function () {\n$1\n})();\n"
+      "id": "G3",
+      "pattern": "(return _.{0,599}\\(0(x0)?,parseInt\\([^,;\u003d]{0,20}\\)\\)\\))",
+      "replacement": "\n return window.displacementPath \u003d (function () {\n$1\n})();\n"
     },
     {
       "id": "E",
